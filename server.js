@@ -1,8 +1,15 @@
 var express = require('express');
 var fs = require('fs');
 var request = require('request');
-var cheerio = require('cheerio');
+var OAuth2 = require('oauth').Oauth2;
 var app = express();
+
+var oauth2 = new OAuth2('942022655927691',
+                        '54b78203147966085cbc3814a7caeab3',
+                        '',
+                        'https://www.facebook.com/dialog/oauth',
+                        'https://graph.facebook.com/oauth/access_token',
+                        null);
 
 app.get('/', function(req, res) {
   
@@ -66,6 +73,11 @@ app.get('/', function(req, res) {
   });
   */
 });
+
+app.get('/facebook/auth', (req, res) => {
+  var redirect_uri;
+});
+
 
 app.listen(3000, () => {
   console.log('server started');
