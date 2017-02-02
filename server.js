@@ -75,7 +75,12 @@ app.get('/', function(req, res) {
 });
 
 app.get('/facebook/auth', (req, res) => {
-  var redirect_uri;
+  var redirect_uri = "http://dev.mitchellsheaffer.com:3000/facebook/callback;
+  var params = {
+    'redirect_uri' : redirect_uri,
+    'scope' : 'user_about_me,user_posts'
+  };
+  res.redirect(oauth2.getAuthoriseUrl(params));
 });
 
 
