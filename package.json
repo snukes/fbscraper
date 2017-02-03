@@ -9,10 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0",
-    "request": "latest",
     "cheerio": "latest",
-    "oauth": "latest"
+    "express": "^4.14.0",
+    "fb": "^1.1.1",
+    "oauth": "latest",
+    "request": "latest"
   },
   "devDependencies": {},
   "repository": {
